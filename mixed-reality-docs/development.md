@@ -6,6 +6,7 @@ author: grbury
 ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
 ---
 
@@ -152,7 +153,7 @@ keywords: Mixed Reality, develop, development, HoloLens, unity, directx
                     <div class="cardText">
                         <h3>Development fundamentals</h3>
                         <p>
-                            <a href="Interaction-fundamentals.md">Interactions</a>
+                            <a href="Interaction-fundamentals.md">Instinctual interactions</a>
                         </p>
                         <p>
                             <a href="rendering.md">Holographic rendering</a>
