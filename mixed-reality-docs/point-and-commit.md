@@ -14,9 +14,27 @@ Point and commit with hands is an input model that enables users to target, sele
 
 ## Device support
 
-Input model | [HoloLens (1st gen)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Immersive headsets](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
-| ---------| -----| ----- | ---------|
-Point and commit with hands | ❌ Not supported | ✔️ Recommended | ✔️ Recommended
+<table>
+<colgroup>
+    <col width="33%" />
+    <col width="22%" />
+    <col width="22%" />
+    <col width="22%" />
+</colgroup>
+<tr>
+     <td><strong>Input model</strong></td>
+     <td><a href="hololens-hardware-details.md"><strong>HoloLens (1st gen)</strong></a></td>
+     <td><strong>HoloLens 2</strong></td>
+     <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+</tr>
+<tr>
+     <td>Point and commit with hands</td>
+     <td>❌ Not supported</td>
+     <td>✔️ Recommended</td>
+     <td>✔️ Recommended</td>
+</tr>
+</table>
+
 
 Point and commit, also known as hands far, is one of the new features that utilizes the new articulated hand-tracking system. This input model is also the primary input model on immersive headsets through the use of motion controllers.
 
@@ -29,7 +47,8 @@ This basic gestural command is triggered by using the thumb and index finger to 
 * In the *pointing* state, the ray is a dash line and the cursor is a donut shape.
 * In the *commit* state, the ray turns into a solid line and the cursor shrinks to a dot.
 
-![](images/Hand-Rays-720px.jpg)
+![Pointing and commit states for hand rays](images/Hand-Rays-720px.jpg)<br>
+*Pointing and commit states for hand rays*
 
 ## Transition between near and far
 
@@ -38,7 +57,8 @@ Instead of using specific gestures, such as "pointing with index finger", to dir
 *  When an object is within arm's length (roughly 50 cm), the rays are turned off automatically, encouraging near interaction.
 *  When the object is farther than 50 cm, the rays are turned on. The transition should be smooth and seamless.
 
-![](images/Transition-Between-Near-And-Far-720px.jpg)
+![The same set of hand gestures are used for both near and far interaction](images/Transition-Between-Near-And-Far-720px.jpg)<br>
+*The same set of hand gestures are used for both near and far interaction.*
 
 ## 2D slate interaction
 
@@ -46,7 +66,7 @@ A 2D slate is a holographic container hosting 2D app contents, such as a web bro
 
 Targeting the hand ray at the corners and edges reveals the closest manipulation affordance. By "grab and drag" manipulation affordances, users can perform uniform scaling through the corner affordances, and can reflow the slate via the edge affordances. Grabbing and dragging the holobar at the top of the 2D slate lets users move the entire slate.
 
-![](images/2D-Slate-Interaction-Far-720px.jpg)
+![2D slate interaction](images/2D-Slate-Interaction-Far-720px.jpg)
 
 For manipulating the 2D slate:<br>
 
@@ -61,9 +81,9 @@ For manipulating the 2D slate:<br>
 In direct manipulation, there are two ways for users to manipulate 3D objects: affordance-based manipulation and non-affordance based manipulation. In the point and commit model, users are capable of achieving exactly the same tasks through the hand rays. No additional learning is needed.<br>
 
 ### Affordance-based manipulation
-Users use hand rays to point and reveal the bounding box and manipulation affordances. Users can apply the manipulation gesture on the bounding box to move the whole object, on the edge affordances to rotate, and on the coner affordances to scale uniformly. <br>
+Users use hand rays to point and reveal the bounding box and manipulation affordances. Users can apply the manipulation gesture on the bounding box to move the whole object, on the edge affordances to rotate, and on the corner affordances to scale uniformly. <br>
 
-![](images/3D-Object-Manipulation-Far-720px.jpg) <br>
+![Affordance-based manipulation](images/3D-Object-Manipulation-Far-720px.jpg) <br>
 
 
 ### Non-affordance based manipulation
@@ -71,19 +91,16 @@ Users point with hand rays to reveal the bounding box then directly apply manipu
 
 <br>
 
-## Instinctual gesturers
-The concept of instinctual gestures for point and commit is similar to that for direct manipulation. The gestures users perform on a 3D object are guided by the design of UI affordances. For example, a small control point might motivate users to pinch with their thumb and index finger, while a user might want to grab a larger object using all five fingers.
+## Instinctual gestures
+The concept of instinctual gestures for point and commit is similar to that for [direct manipulation with hands](direct-manipulation.md). The gestures users perform on a 3D object are guided by the design of UI affordances. For example, a small control point might motivate users to pinch with their thumb and index finger, while a user might want to grab a larger object using all five fingers.
 
-![](images/Instinctual-Gestures-Far-720px.jpg)<br>
+![Instinctual gestures](images/Instinctual-Gestures-Far-720px.jpg)<br>
 
 ## Symmetric design between hands and 6 DoF controller 
 The concept of point and commit for far interaction was initially created and defined for the Mixed Reality Portal (MRP) where a user wears an immersive headset and interacts with 3D objects via motion controllers. The motion controllers shoot out rays for pointing and manipulating far objects. There are buttons on the controllers for further committing different actions. We leverage the interaction model of rays and attached them to both hands. With this symmetric design, users who are familiar with MRP won't need to learn another interaction model for far pointing and manipulation when they use HoloLen 2, and vice versa.    
 
-![](images/Symmetric-Design-For-Rays-720px.jpg)<br>
+![Symmetric design between hands and 6 DoF controller](images/Symmetric-Design-For-Rays-720px.jpg)<br>
 
-## Instinctual gestures
-
-![](images/Instinctual-Gestures-Far-720px.jpg)
 
 ## See also
 * [Head-gaze and commit](gaze-and-commit.md)
